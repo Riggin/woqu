@@ -1,0 +1,76 @@
+<!--person.wxml-->
+<view class="page">
+	<view class="userinfo">
+		<button
+		 wx:if="{{!hasUserInfo && canIUse}}"
+		 open-type="getUserInfo"
+		 lang="zh_CN"
+		 bindgetuserinfo="getUserInfo"
+		> 获取头像昵称
+		</button>
+		<block wx:else>
+			<image
+			 bindtap="bindViewTap"
+			 class="userinfo-avatar"
+			 src="{{userInfo.avatarUrl}}"
+			 mode="cover"
+			></image>
+			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+		</block>
+		<view class="page__bd page__bd_spacing">
+			<view class="weui-flex">
+				<view class="weui-flex__item">
+					<view class="placeholder-smaller">0</view>
+					<view class="placeholder-small">已经打卡</view>
+				</view>
+				<view class="weui-flex__item">
+					<view class="placeholder-smaller">10</view>
+					<view class="placeholder-small">天数</view>
+				</view>
+				<view class="weui-flex__item">
+					<view class="placeholder-smaller">10</view>
+					<view class="placeholder-small">笔数</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="page__bd">
+		<view class="weui-cells weui-cells_after-title">
+			<navigator
+			 url=""
+			 class="weui-cell weui-cell_access"
+			 hover-class="weui-cell_active"
+			>
+				<view class="weui-cell__hd">
+					<image src="{{icon}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+				</view>
+				<view class="weui-cell__bd">1</view>
+				<view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+			</navigator>
+			<navigator
+			 url=""
+			 class="weui-cell weui-cell_example weui-cell_access"
+			 hover-class="weui-cell_active"
+			>
+				<view class="weui-cell__hd">
+					<image src="{{icon}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+				</view>
+				<view class="weui-cell__bd">2</view>
+				<view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+			</navigator>
+			<navigator
+			 url=""
+			 class="weui-cell weui-cell_example weui-cell_access"
+			 hover-class="weui-cell_active"
+			>
+				<view class="weui-cell__hd">
+					<image src="{{icon}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+				</view>
+				<view class="weui-cell__bd">3</view>
+				<view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+			</navigator>
+		</view>
+	</view>
+
+</view>
+

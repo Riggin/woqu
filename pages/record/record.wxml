@@ -1,0 +1,32 @@
+<view class="page">
+	<view class="page__hd">
+		<view class="page__title">Grid</view>
+		<view class="page__desc">九宫格</view>
+	</view>
+	<view class="page__bd">
+		<view class="weui-grids">
+			<block
+			 wx:for="{{grids}}"
+			 wx:for-index="key"
+			 wx:for-item="item"
+			 wx:key="*this"
+			>
+				<navigator
+				 url="{{item.url}}"
+				 class="weui-grid"
+				 hover-class="weui-grid_active"
+				>
+					<view>
+						<image
+						 class="weui-grid__icon"
+						 src="../../assets/images/icon_tabbar.png"
+						 alt
+						></image>
+					</view>
+					<view class="weui-grid__label">{{item.name}}</view>
+				</navigator>
+			</block>
+		</view>
+	</view>
+</view>
+

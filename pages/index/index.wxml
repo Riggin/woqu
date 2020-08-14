@@ -1,26 +1,30 @@
 <!--index.wxml-->
-<view class="container">
-	<view class="userinfo">
-		<button
-		 wx:if="{{!hasUserInfo && canIUse}}"
-		 open-type="getUserInfo"
-		 lang="zh_CN"
-		 bindgetuserinfo="getUserInfo"
-		> 获取头像昵称
-		</button>
-		<block wx:else>
-			<image
-			 bindtap="bindViewTap"
-			 class="userinfo-avatar"
-			 src="{{userInfo.avatarUrl}}"
-			 mode="cover"
-			></image>
-			<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
-			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
-		</block>
-	</view>
-	<view class="usermotto">
-		<text class="user-motto">{{motto}}</text>
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="page__bd page__bd_spacing">
+		<view class="weui-flex">
+			<view class="weui-flex__item">
+				<view class="placeholder-small">{{years}}年</view>
+				<view class="placeholder-smaller">
+					<picker
+					 mode="multiSelector"
+					 bindchange="bindMultiPickerChange"
+					 bindcolumnchange="bindMultiPickerColumnChange"
+					 value="{{multiIndex}}"
+					 range="{{multiArray}}"
+					>
+						<input value='{{months}}' placeholder='月' />
+					</picker>
+				</view>
+			</view>
+			<view class="weui-flex__item">
+				<view class="placeholder-small">收入</view>
+				<view class="placeholder-smaller">10</view>
+			</view>
+			<view class="weui-flex__item">
+				<view class="placeholder-small">支出</view>
+				<view class="placeholder-smaller">10</view>
+			</view>
+		</view>
 	</view>
 </view>
 

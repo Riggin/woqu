@@ -1,7 +1,9 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/person/person",
+    "pages/record/record"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -17,14 +19,20 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "/assets/tabBar/home_one.jpg",
-        "selectedIconPath": "/assets/tabBar/home_one.jpg"
+        "iconPath": "/assets/tabBar/icon_tabbar.png",
+        "selectedIconPath": "/assets/tabBar/icon_tabbar.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志",
+        "pagePath": "pages/record/record",
+        "text": "新增",
         "iconPath": "/assets/tabBar/log_one.jpg",
         "selectedIconPath": "assets/tabBar/log_one.jpg"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人中心",
+        "iconPath": "/assets/tabBar/icon_tabbar.png",
+        "selectedIconPath": "/assets/tabBar/icon_tabbar.png"
       }
     ]
   },

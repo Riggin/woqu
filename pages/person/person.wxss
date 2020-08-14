@@ -1,20 +1,34 @@
-/**index.wxss**/
-.weui-flex {
-  height: 88px;
+/**person.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: burlywood;
-  margin-bottom: 10px;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  margin-top: 100rpx;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  padding-bottom: 30rpx;
+}
+
+.weui-flex {
+  margin-bottom: 20rpx;
 }
 
 .placeholder-smaller {
-  width: 100rpx;
-  padding:0 60rpx;
   text-align:center;
   height:1em;
   line-height:1em;
   color:var(--weui-FG-1);
   font-size: 40rpx;
-  margin-top: 20rpx;
 }
 .placeholder-small {
   width: 100rpx;
@@ -25,4 +39,8 @@
   line-height:1em;
   color:var(--weui-FG-1);
   font-size: 20rpx;
+}
+
+.weui-cell {
+  height: 6px;
 }

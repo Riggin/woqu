@@ -1,0 +1,9 @@
+/* pages/record/record.wxss */
+
+.weui-grid__icon {
+    display: block;
+    margin: 0 auto;
+}
+.weui-grid__label {
+    padding-top: 20rpx;
+}
